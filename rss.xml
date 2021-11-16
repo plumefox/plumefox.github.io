@@ -5,26 +5,298 @@
         <link>https://plumefox.github.io</link>
         <description></description>
         <language>en</language>
-        <pubDate>Tue, 16 Nov 2021 14:31:47 +0800</pubDate>
-        <lastBuildDate>Tue, 16 Nov 2021 14:31:47 +0800</lastBuildDate>
+        <pubDate>Tue, 16 Nov 2021 16:56:27 +0800</pubDate>
+        <lastBuildDate>Tue, 16 Nov 2021 16:56:27 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://plumefox.github.io/uncategorized/hello-world/</guid>
+            <guid isPermalink="true">https://plumefox.github.io/[object%20Object]/win10/</guid>
+            <title>虚拟机win10优化</title>
+            <link>https://plumefox.github.io/[object%20Object]/win10/</link>
+            <pubDate>Tue, 16 Nov 2021 16:56:27 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;主要目标：降低虚拟机负载&lt;/p&gt;
+&lt;h2 id=&#34;1关闭windows自动更新与windows-defender&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1关闭windows自动更新与windows-defender&#34;&gt;#&lt;/a&gt; 1. 关闭 windows 自动更新与 windows defender&lt;/h2&gt;
+&lt;p&gt;运行──gpedit.msc&lt;/p&gt;
+&lt;p&gt;计算机配置 ----- 管理模板 -----Windows 组件 ----Microsoft Defender 防病毒。&lt;/p&gt;
+&lt;p&gt;勾选 “已启用” 选项，就可以关闭 Windows defender&lt;/p&gt;
+&lt;p&gt;计算机配置 ----- 管理模板 -----Windows 组件 ----windows 更新&lt;/p&gt;
+&lt;h2 id=&#34;2关闭家庭组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2关闭家庭组&#34;&gt;#&lt;/a&gt; 2. 关闭家庭组&lt;/h2&gt;
+&lt;p&gt;此电脑──管理──服务──HomeGroup Listener 和 HomeGroupProvider&lt;/p&gt;
+&lt;h2 id=&#34;3关闭特效&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3关闭特效&#34;&gt;#&lt;/a&gt; 3. 关闭特效&lt;/h2&gt;
+&lt;p&gt;右键 此电脑 — 属性──高级系统设置&lt;/p&gt;
+&lt;p&gt;仅保留平滑 + 速览&lt;/p&gt;
+&lt;h2 id=&#34;4win10开机自动登录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4win10开机自动登录&#34;&gt;#&lt;/a&gt; 4.win10 开机自动登录&lt;/h2&gt;
+&lt;p&gt;桌面左下角 win 图标右键 — 运行 ---- 运行框输入 — netplwiz 确定&lt;/p&gt;
+&lt;p&gt;勾点掉&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://plumefox.github.io/[object%20Object]/pwntools_Usage/</guid>
+            <title>pwntools用法</title>
+            <link>https://plumefox.github.io/[object%20Object]/pwntools_Usage/</link>
+            <pubDate>Tue, 16 Nov 2021 16:55:34 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;#x86  ebp  e&lt;br&gt;
+#x64  RDI,RSI,RDX,RCX,R8,R9&lt;br&gt;
+#coding:utf-8&lt;/p&gt;
+&lt;p&gt;context(os=‘linux’,arch=‘amd64’)&lt;br&gt;
+context(arch=‘amd32’)&lt;br&gt;
+shellcode=asm(&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NoZWxsY3JhZnQuc2g=&#34;&gt;shellcraft.sh&lt;/span&gt;())&lt;br&gt;
+context.log_level = ‘DEBUG’&lt;/p&gt;
+&lt;p&gt;from pwn import *&lt;/p&gt;
+&lt;p&gt;s = remote(‘xxx’,xxx)&lt;br&gt;
+s = process(’./xxx’)&lt;br&gt;
+gdb.attach(s)&lt;/p&gt;
+&lt;p&gt;elf = ELF(’./xxxx’)&lt;br&gt;
+plt = elf.plt[‘xxx’]&lt;br&gt;
+got = elf.got[‘xxx’]&lt;br&gt;
+symbols = elf.symbols[’’]&lt;/p&gt;
+&lt;p&gt;addr = int(s.recvuntil(’\n’), 16)&lt;/p&gt;
+&lt;p&gt;#format&lt;br&gt;
+payload = “aaaa_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x”&lt;br&gt;
+payload =&amp;quot;%85c%7$n&amp;quot;&lt;/p&gt;
+&lt;p&gt;s.recv()&lt;br&gt;
+s.recvuntil(‘xxx’)&lt;br&gt;
+s.send()&lt;br&gt;
+s.sendline()&lt;br&gt;
+s.interactive()&lt;br&gt;
+s.close()&lt;/p&gt;
+&lt;p&gt;raw_input(’#’)&lt;/p&gt;
+&lt;p&gt;#DynELF&lt;br&gt;
+d = DynELF(leak, elf = elf)&lt;br&gt;
+def leak(addr):&lt;br&gt;
+payload = ‘’&lt;br&gt;
+payload += ‘A’*padding                #padding&lt;br&gt;
+payload += p32 (write_addr)      #调用 write&lt;br&gt;
+payload += p32 (start_addr)        #write 返回到 start&lt;br&gt;
+payload += p32 (1)                    #write 第一个参数 fd&lt;br&gt;
+payload += p32 (addr)               #write 第二个参数 buf&lt;br&gt;
+payload += p32 (8)                    #write 第三个参数 size&lt;br&gt;
+s.sendline(payload)&lt;br&gt;
+content = s.recv()[:8]&lt;br&gt;
+print(&amp;quot;%#x -&amp;gt; %s&amp;quot; %(addr, (content or ‘’).encode(‘hex’)))&lt;br&gt;
+return content&lt;/p&gt;
+&lt;p&gt;def leak(addr):&lt;br&gt;
+payload2leak_addr = “&lt;strong&gt;&lt;strong&gt;” + pack(addr) + “&lt;/strong&gt;&lt;/strong&gt;”&lt;br&gt;
+s.send(payload2leak_addr)&lt;br&gt;
+data = s.recv()&lt;br&gt;
+return data&lt;/p&gt;
+&lt;p&gt;d = DynELF(leak, pointer = pointer_into_ELF_file, elf = ELFObject) system_addr = d.lookup(“system”, libc)&lt;/p&gt;
+&lt;p&gt;system_addr = d.lookup(‘system’, ‘libc’)&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://plumefox.github.io/[object%20Object]/install-dvta/</guid>
+            <title>dvta环境搭建</title>
+            <link>https://plumefox.github.io/[object%20Object]/install-dvta/</link>
+            <pubDate>Tue, 16 Nov 2021 16:55:18 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;**&lt;br&gt;
+**&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/494CA40150CA599D634F945B8661477E.png&#34; alt&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;** 客户端：**windows10、DVTA（下载地址：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3NlY3Z1bHR1cmUvZHZ0YSVFRiVCQyU4OQ==&#34;&gt;https://github.com/secvulture/dvta）&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/2B14851FC8E244040454549663D461D5.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS00OXNxNjZoY3FhMTU0Yi5uZXQ=&#34;&gt;需要安装.net&lt;/span&gt; framework4.5 才能正常运行。&lt;/p&gt;
+&lt;p&gt;** 服务端：**windows10、 SQL Server 2008 并设置账号密码为 sa/p@ssw0rd、FTP 服务，服务器地址需为 192.168.56.110&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;安装包准备：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.DVTA 安装包&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzIubmV0&#34;&gt;2.net&lt;/span&gt; framework 4.5&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.sqlserver 安装包&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+**&lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;服务端配置步骤：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一步安装 SQL Server 2008:&lt;/p&gt;
+&lt;p&gt;安装 SQL Server 2008 需要先安装.net3.5，下载地址：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy9kb3dubG9hZC9kZXRhaWxzLmFzcHg/aWQ9MjE=&#34;&gt;https://www.microsoft.com/en-us/download/details.aspx?id=21&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;按照网上的教程，SQL Server 2008 的下载地址链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMTFVYzJhbG9yanNBa0VqMXQwZHhZM2c=&#34;&gt;https://pan.baidu.com/s/11Uc2alorjsAkEj1t0dxY3g&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;提取码：40bq&lt;/p&gt;
+&lt;p&gt;只用网盘中的第一个。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/34BFD8E55E7929A65B529F43445CAA14.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;双击运行&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/43400AFDBB2D497EB969EDD4E225E403.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/E8A4E78791400E7DCBDA0FA203E07990.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/5835E1B246C35FB737392F3935B77BA0.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/57FCE37615FD1723D996A56EB2229128.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/C29899A696B98C01B20F1F2C9BC23A6A.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/66234BCC55C3EE4FBE1BD938F146A8C9.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/66B0F452813C0785866DD52790A9FE5F.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/76FBA720EE1BE1023BEA7F54D3091C39.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/7D5B0805ED13209B5BEA5BE488B7D640.jpg&#34; alt&gt;选择 system&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/D3BF4A256DAA59300F60C4DA961F006A.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/A13F25C932224922FBED1AC075CF3DF4.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/2C8A42FF82E16C3C04C4EADA127FC8F8.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;此处的密码为 p@ssw0rd&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/25B6C97888586AE9F592F9A27B3104AF.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/A192AD496B2C51D3B94602B359C70848.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/2C9A67629CDE7034F3C6429AB8432A10.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/1020005BB651C7CF274E9FC73B98E8A1.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/18F04B2238B2F9A30510558EA29DB205.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/A1A9A295B9F0D53415591223F507BF2D.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二步安装管理工具&lt;/strong&gt;，下载地址：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvc3FsL3NzbXMvZG93bmxvYWQtc3FsLXNlcnZlci1tYW5hZ2VtZW50LXN0dWRpby1zc21zP3ZpZXc9c3FsLXNlcnZlci0yMDE3&#34;&gt;https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;一直点下一步即可，安装过后如图：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/42BAD5B09B0489AA9197EDD2F2C23301.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据库中新建 DVTA 库：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/E8C67B0020BCDCDEDFB29C32B60617D8.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;建表名为 users 和 expenses 两个表：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/936160E1EC5C394906E2CE3A5CFAD0AE.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/4E14783B08935B6355CEC9ED81323CA4.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;user 表中添加数据：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/04E622701E264E3ACD0D818BD06832DE.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;第三部：允许 SQL Server 远程访问：&lt;/p&gt;
+&lt;p&gt;再次进入 ssms，右键选择 “属性”：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/5F606BF25BCE11FD2E8ACDBD73F5E625.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;左侧选择 “安全性”，确保 “SQL Server 和 Windows 身份验证模式” 开启：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/5931AE6A33370ABFAB6AD5A5813B24E4.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;选择 “连接”，勾选 “允许远程连接此服务器”，然后点 “确定”：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/4711659E73AFA70635F8E6DFB43D9F90.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;展开 “安全性”，登录名 “sa”，右键选择 “属性”：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/DA3A474FE9742110E79783CE5ECECDA5.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;左侧选择 “常规”，右侧选择 “SQL Server 身份验证”，并设置密码 p@ssw0rd:&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/67EC13C7AF291CE8A283E2ACB1A46F66.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;右击数据库选择 “方面”：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/C107F19E0DB61253369C21D7C6F77586.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;在右侧的方面下拉框中选择 “服务器配置”；将 “RemoteAccessEnabled” 属性设为 “True”，点 “确定”：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/8CB51C7433856EC790D254CB9D654CDB.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;下面开始配置 SSCM，&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/21BA505FFD4D49DC1C717AAF75950A36.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;选中左侧的 “SQL Server 服务”，确保右侧的 “SQL Server” 以及 “SQL Server Browser” 正在运行：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/CFE90740C177C743FFFC9861F2619847.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;注：如果 SQL Server Browser 为灰色不能启动，从 services.msc 中将 SQL Server Browser 右击属性打开，启动模式为 手动或者自动，然后就能启动该服务了。&lt;/p&gt;
+&lt;p&gt;在左侧选择 sql server 网络配置节点下的 sqlexpress 的协议，在右侧的 TCP/IP 默认是 “否”，右键启用或者双击打开设置面板将其修改为 “是”：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/8D1357045EA0ED536BFEAF912506A8C4.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/AE90B5E0C100E75B2E4DDCD6FAC2AC9F.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;选择 “IP 地址” 选项卡，设置监听端口为 1433：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/B13F556A986B101501B1BD608544C9B7.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;将 &amp;quot;客户端协议&amp;quot; 的 &amp;quot;TCP/IP&amp;quot; 也修改为 “Enabled”&lt;/p&gt;
+&lt;p&gt;配置完成，重新启动 SQL Server 2008。此时应该可以使用了。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/10F86409C381D78098018E2550A74E93.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;现在配置 FTP 服务：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、打开控制面板 -&amp;gt; 程序和功能 -&amp;gt; 启用或关闭 windows 功能然后如图：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/893E8DF5BA5191ABB3DEA0D27ADF5F9E.jpg&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;2、配置 FTP 用户：我的电脑 -&amp;gt; 右击点击管理 -&amp;gt; 本地用户和组&lt;/p&gt;
+&lt;p&gt;添加用户名：dvta 密码：p@ssw0rd 的用户。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/531CB2EA11C9D41A45192C59124C7201.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;3、添加 FTP 站点：Windows10 搜索框搜索 IIS 按回车进入到下方界面：&lt;/p&gt;
+&lt;p&gt;在网站右击 -&amp;gt; 添加 ftp 站点，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/7E67958236452E15C1D3826C3129E6B5.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/722B17AB4EE20A5F97A72EBE8D3F4470.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/722B17AB4EE20A5F97A72EBE8D3F4470.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;到此点击 “完成”，配置 FTP 服务也完成了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;配置两个虚拟机的网卡，服务器 IP 地址要为 192.168.56.110，这是代码中&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;写死的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们返回客户端的 DVTA 中，使用 admin/admin123 可以登录，说明配置成功。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/45832274740B06DAD1033BA1E33AC572.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/E963688F266841712FD4C4223DE1CC85.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;resources/C59B41D5138805BDC402FD33DEED73B7.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;之后我们就可以在通过这个客户端进行各种渗透测试。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://plumefox.github.io/[object%20Object]/miral%E9%AA%B0%E5%A8%98%E9%85%8D%E7%BD%AE/</guid>
+            <title>miral骰娘配置</title>
+            <link>https://plumefox.github.io/[object%20Object]/miral%E9%AA%B0%E5%A8%98%E9%85%8D%E7%BD%AE/</link>
+            <pubDate>Tue, 16 Nov 2021 16:52:53 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;1服务器安装docker&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1服务器安装docker&#34;&gt;#&lt;/a&gt; 1. 服务器安装 docker&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn1&#34; id=&#34;fnref1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;yum install docker
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;2启动docker&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2启动docker&#34;&gt;#&lt;/a&gt; 2 启动 docker&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;sudo docker run --rm -d -it suhuiw4123/mirai-dice
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;3docker内部配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3docker内部配置&#34;&gt;#&lt;/a&gt; 3.docker 内部配置&lt;/h3&gt;
+&lt;p&gt;登录&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker ps
+docker attach id
+###miral信息
+login qq帐号 密码 
+#将滑块验证修改为二维码验证
+#手动把网址中的verify (https://ti.qq.com/safe/verify?…) 改成
+#qrcode(https://ti.qq.com/safe/qrcode?…) 
+autologin add QQ账号 密码 
+autologin setConfig QQ账号 protocol 协议名称 #协议名可选 ANDROID_PHONE, ANDROID_PAD或ANDROID_WATCH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;4提交修改&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4提交修改&#34;&gt;#&lt;/a&gt; 4. 提交修改&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;#ctrl+p+q退出容器
+docker ps
+docker commit id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;5重启docker&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5重启docker&#34;&gt;#&lt;/a&gt; 5. 重启 docker&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker restart id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;传输文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#传输文件&#34;&gt;#&lt;/a&gt; 传输文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;scp /path/filename username@servername:/path/
+scp /root/ root@ip:/home/container/dice/Dice[DATA]/plugin/
+
+scp -r local_dir username@servername:remote_dir
+docker cp 本地文件的路径 container_id:romote_dir
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker exec -it id /bin/bash
+docker exec -it --user root id /bin/bash
+
+docker run --env DICE_WEBUI_PORT=8000 --env DICE_WEBUI_ALLOW_INTERNET_ACCESS=1 --rm -itd -p 8000:8000 localhost/demo#环境辩论注入+映射8000到宿主机8000 后台运行
+docker run -itd --privileged=true container
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr class=&#34;footnotes-sep&#34;&gt;
+&lt;section class=&#34;footnotes&#34;&gt;
+&lt;ol class=&#34;footnotes-list&#34;&gt;
+&lt;li id=&#34;fn1&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bS5rb2tvbmEudGVjaC9kLzQ0OC1taXJhaS1kaWNlLXhpYS16YWktamktZGEtamlhbi16aGktbmFuLXp1aS1ob3UtZ2VuZy14aW4tMjAyMTA5MTk=&#34;&gt;https://forum.kokona.tech/d/448-mirai-dice-xia-zai-ji-da-jian-zhi-nan-zui-hou-geng-xin-20210919&lt;/span&gt; &lt;a href=&#34;#fnref1&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://plumefox.github.io/[object%20Object]/mac-hdmi/</guid>
+            <title>mac外接2k显示器开启hdpi</title>
+            <link>https://plumefox.github.io/[object%20Object]/mac-hdmi/</link>
+            <pubDate>Tue, 16 Nov 2021 16:52:39 +0800</pubDate>
+            <description><![CDATA[ &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi-zh.sh)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://plumefox.github.io/[object%20Object]/git/</guid>
+            <title>git基本操作</title>
+            <link>https://plumefox.github.io/[object%20Object]/git/</link>
+            <pubDate>Tue, 16 Nov 2021 16:52:30 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight js&#34;&gt;&lt;figcaption data-lang=&#34;JavaScript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git  config &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;global user&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name  &lt;span class=&#34;token string&#34;&gt;&#39;username&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git  config &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;global user&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;email &lt;span class=&#34;token string&#34;&gt;&#39;email&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config &lt;span class=&#34;token operator&#34;&gt;--&lt;/span&gt;list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cd &lt;span class=&#34;token operator&#34;&gt;~&lt;/span&gt;&lt;span class=&#34;token regex&#34;&gt;&lt;span class=&#34;token regex-delimiter&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token regex-source language-regex&#34;&gt;.ssh&lt;/span&gt;&lt;span class=&#34;token regex-delimiter&#34;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;more id_rsa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pub&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;cd ./project_name
+
+git init #初始化仓库
+git add test.md #增加文件
+git status #查看提交和修改状态
+git log --oneline #精简log输出
+git branch dev1 #新分支
+git checkout dev1 #切换到dev1
+git branch #查看所有分支
+
+git commit test.md -m &amp;quot;helloworld&amp;quot; #提交+注释
+git push --set-upstream origin dev1 #远程同步
+git reset --hard HEAD^ #回滚上一分支
+git reset --hard 59019b4 #回滚到指定分支
+
+
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://plumefox.github.io/[object%20Object]/hello-world/</guid>
             <title>Hello World</title>
-            <link>https://plumefox.github.io/uncategorized/hello-world/</link>
+            <link>https://plumefox.github.io/[object%20Object]/hello-world/</link>
             <pubDate>Tue, 16 Nov 2021 14:31:47 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;Quick-Start&#34;&gt;&lt;a href=&#34;#Quick-Start&#34; class=&#34;headerlink&#34; title=&#34;Quick Start&#34;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&#34;Create-a-new-post&#34;&gt;&lt;a href=&#34;#Create-a-new-post&#34; class=&#34;headerlink&#34; title=&#34;Create a new post&#34;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;Run-server&#34;&gt;&lt;a href=&#34;#Run-server&#34; class=&#34;headerlink&#34; title=&#34;Run server&#34;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;Generate-static-files&#34;&gt;&lt;a href=&#34;#Generate-static-files&#34; class=&#34;headerlink&#34; title=&#34;Generate static files&#34;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;Deploy-to-remote-sites&#34;&gt;&lt;a href=&#34;#Deploy-to-remote-sites&#34; class=&#34;headerlink&#34; title=&#34;Deploy to remote sites&#34;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo new &lt;span class=&#34;token string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo generate&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;h&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;$ hexo deploy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

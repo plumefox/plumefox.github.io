@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
           <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
         </ul>
       </div>
     </header>
@@ -121,7 +121,216 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/uncategorized/hello-world/" itemprop="url" title="Hello World"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></a>
+    <a href="/%5Bobject%20Object%5D/win10/" itemprop="url" title="虚拟机win10优化"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicivghyooj20zk0m8dir.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2021-11-16 16:56:27">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-16T16:56:27+08:00">2021-11-16</time>
+  </span>
+</div>
+
+    <h3><a href="/%5Bobject%20Object%5D/win10/" itemprop="url" title="虚拟机win10优化">虚拟机win10优化</a></h3>
+    <div class="excerpt">
+        主要目标：降低虚拟机负载
+# 1. 关闭 windows 自动更新与 windows defender
+运行──gpedit.msc
+计算机配置 ----- 管理模板 -----Windows 组件 ----Microsoft Defender 防病毒。
+勾选 “已启用” 选项，就可以关闭 Windows defender
+计算机配置 ----- 管理模板 -----Windows 组件 ----windows 更新
+# 2. 关闭家庭组
+此电脑──管理──服务──HomeGroup Listener 和 HomeGroupProvider
+# 3. 关闭特效
+右键 此电脑 —...
+    </div>
+    <a href="/%5Bobject%20Object%5D/win10/" itemprop="url" title="虚拟机win10优化" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%5Bobject%20Object%5D/pwntools_Usage/" itemprop="url" title="pwntools用法"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclhnx9glj20zk0m8npd.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2021-11-16 16:55:34">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-16T16:55:34+08:00">2021-11-16</time>
+  </span>
+</div>
+
+    <h3><a href="/%5Bobject%20Object%5D/pwntools_Usage/" itemprop="url" title="pwntools用法">pwntools用法</a></h3>
+    <div class="excerpt">
+        #x86 ebp e
+#x64 RDI,RSI,RDX,RCX,R8,R9
+#coding:utf-8
+context(os=‘linux’,arch=‘amd64’)
+context(arch=‘amd32’)
+shellcode=asm(shellcraft.sh())
+context.log_level = ‘DEBUG’
+from pwn import *
+s = remote(‘xxx’,xxx)
+s = process(’./xxx’)
+gdb.attach(s)
+elf = ELF(’./xxxx’)
+plt = elf.plt[‘xxx’]
+got =...
+    </div>
+    <a href="/%5Bobject%20Object%5D/pwntools_Usage/" itemprop="url" title="pwntools用法" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%5Bobject%20Object%5D/install-dvta/" itemprop="url" title="dvta环境搭建"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2021-11-16 16:55:18">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-16T16:55:18+08:00">2021-11-16</time>
+  </span>
+</div>
+
+    <h3><a href="/%5Bobject%20Object%5D/install-dvta/" itemprop="url" title="dvta环境搭建">dvta环境搭建</a></h3>
+    <div class="excerpt">
+        **
+**
+
+** 客户端：**windows10、DVTA（下载地址：
+https://github.com/secvulture/dvta）
+
+需要安装.net framework4.5 才能正常运行。
+** 服务端：**windows10、 SQL Server 2008 并设置账号密码为 sa/p@ssw0rd、FTP 服务，服务器地址需为 192.168.56.110
+
+安装包准备：
+1.DVTA 安装包
+2.net framework 4.5
+2.sqlserver 安装包
+3.
+**
+**
+**
+**
+服务端配置步骤：
+第一步安装 SQL Server 2008:
+安装 SQL...
+    </div>
+    <a href="/%5Bobject%20Object%5D/install-dvta/" itemprop="url" title="dvta环境搭建" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%5Bobject%20Object%5D/miral%E9%AA%B0%E5%A8%98%E9%85%8D%E7%BD%AE/" itemprop="url" title="miral骰娘配置"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2021-11-16 16:52:53">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-16T16:52:53+08:00">2021-11-16</time>
+  </span>
+</div>
+
+    <h3><a href="/%5Bobject%20Object%5D/miral%E9%AA%B0%E5%A8%98%E9%85%8D%E7%BD%AE/" itemprop="url" title="miral骰娘配置">miral骰娘配置</a></h3>
+    <div class="excerpt">
+        # 1. 服务器安装 docker[1]
+yum install docker
+
+# 2 启动 docker
+sudo docker run --rm -d -it suhuiw4123/mirai-dice
+
+# 3.docker 内部配置
+登录
+docker ps
+docker attach id
+###miral信息
+login qq帐号 密码
+#将滑块验证修改为二维码验证
+#手动把网址中的verify (https://ti.qq.com/safe/verify?…) 改成
+#qrcode(https://ti.qq.com/safe/qrcode?…)
+autologin add...
+    </div>
+    <a href="/%5Bobject%20Object%5D/miral%E9%AA%B0%E5%A8%98%E9%85%8D%E7%BD%AE/" itemprop="url" title="miral骰娘配置" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%5Bobject%20Object%5D/mac-hdmi/" itemprop="url" title="mac外接2k显示器开启hdpi"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2021-11-16 16:52:39">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-16T16:52:39+08:00">2021-11-16</time>
+  </span>
+</div>
+
+    <h3><a href="/%5Bobject%20Object%5D/mac-hdmi/" itemprop="url" title="mac外接2k显示器开启hdpi">mac外接2k显示器开启hdpi</a></h3>
+    <div class="excerpt">
+        bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi-zh.sh)&amp;quot;
+    </div>
+    <a href="/%5Bobject%20Object%5D/mac-hdmi/" itemprop="url" title="mac外接2k显示器开启hdpi" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%5Bobject%20Object%5D/git/" itemprop="url" title="git基本操作"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicm07ih54j20zk0m84qp.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2021-11-16 16:52:30">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-11-16T16:52:30+08:00">2021-11-16</time>
+  </span>
+</div>
+
+    <h3><a href="/%5Bobject%20Object%5D/git/" itemprop="url" title="git基本操作">git基本操作</a></h3>
+    <div class="excerpt">
+        git config --global user.name &#39;username&#39;git config --global user.email &#39;email&#39;git config --listcd ~/.ssh/more id_rsa.pubcd ./project_name
+
+git init #初始化仓库
+git add test.md #增加文件
+git status #查看提交和修改状态
+git log --oneline #精简log输出
+git branch dev1 #新分支
+git checkout dev1 #切换到dev1
+git branch...
+    </div>
+    <a href="/%5Bobject%20Object%5D/git/" itemprop="url" title="git基本操作" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/%5Bobject%20Object%5D/hello-world/" itemprop="url" title="Hello World"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclfdu6exj20zk0m87hw.jpg"></a>
   </div>
   <div class="info">
     
@@ -134,15 +343,16 @@
   </span>
 </div>
 
-    <h3><a href="/uncategorized/hello-world/" itemprop="url" title="Hello World">Hello World</a></h3>
+    <h3><a href="/%5Bobject%20Object%5D/hello-world/" itemprop="url" title="Hello World">Hello World</a></h3>
     <div class="excerpt">
         Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
-
-More info: Writing
-Run server1$...
+# Quick Start
+# Create a new post
+h$ hexo new &quot;My New Post&quot;More info: Writing
+# Run server
+h$...
     </div>
-    <a href="/uncategorized/hello-world/" itemprop="url" title="Hello World" class="btn">more...</a>
+    <a href="/%5Bobject%20Object%5D/hello-world/" itemprop="url" title="Hello World" class="btn">more...</a>
   </div>
 </article>
 
@@ -176,7 +386,7 @@ Run server1$...
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">1</span>
+        <span class="count">7</span>
         <span class="name">posts</span>
       </a>
     </div>
@@ -256,7 +466,61 @@ Run server1$...
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/uncategorized/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/%5Bobject%20Object%5D/mac-hdmi/" title="mac外接2k显示器开启hdpi">mac外接2k显示器开启hdpi</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/install-dvta/" title="dvta环境搭建">dvta环境搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/win10/" title="虚拟机win10优化">虚拟机win10优化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/pwntools_Usage/" title="pwntools用法">pwntools用法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/miral%E9%AA%B0%E5%A8%98%E9%85%8D%E7%BD%AE/" title="miral骰娘配置">miral骰娘配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/git/" title="git基本操作">git基本操作</a></span>
   </li>
 
   </ul>
