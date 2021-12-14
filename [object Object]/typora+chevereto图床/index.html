@@ -1,0 +1,514 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Category" href="https://plumefox.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Category" href="https://plumefox.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Category" href="https://plumefox.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://plumefox.github.io/[object%20Object]/typora+chevereto%E5%9B%BE%E5%BA%8A/">
+
+
+
+  <title>
+关于自建图床那些事──typora+cheverto图床 |
+PLUMEFOX = Category = ...</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">关于自建图床那些事──typora+cheverto图床
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2021-12-14 23:55:46">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2021-12-14T23:55:46+08:00">2021-12-14</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">PLUMEFOX</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://plumefox.github.io/[object%20Object]/typora+chevereto%E5%9B%BE%E5%BA%8A/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="PLUMEFOX">
+    <meta itemprop="description" content="..., ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Category">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="关于自建图床那些事typoracheverto图床"><a class="markdownIt-Anchor" href="#关于自建图床那些事typoracheverto图床">#</a> 关于自建图床那些事──typora+cheverto 图床</h1>
+<p>偶然间发现 typora 可以使用规则，将本地或者网络图片上传到图床。查了些资料，发现了开源的图床 chevereto。正好手上有个闲置的服务器，<s>于是开始了快乐的踩坑之旅</s></p>
+<h3 id="一些参考信息"><a class="markdownIt-Anchor" href="#一些参考信息">#</a> 一些参考信息：</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly92My1kb2NzLmNoZXZlcmV0by5jb20vYXBpLw==">API 官方文档</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9yZWdpc3RyeS5odWIuZG9ja2VyLmNvbS9yL2xpbnV4c2VydmVyL2NoZXZlcmV0bw==">linuxserver/chevereto - Docker Image | Docker Hub</span></p>
+<p>环境信息：Linux VM-16-5-centos 4.18.0-193.28.1.el8_2.x86_64 #1 SMP Thu Oct 22 00:20:22 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</p>
+<h3 id="配置流程"><a class="markdownIt-Anchor" href="#配置流程">#</a> 配置流程：</h3>
+<h4 id="1-服务器安装docker"><a class="markdownIt-Anchor" href="#1-服务器安装docker">#</a> 1. 服务器安装 docker</h4>
+<p>​	可选：docker-compose</p>
+<h4 id="2-配置数据库及云服务器端口放开"><a class="markdownIt-Anchor" href="#2-配置数据库及云服务器端口放开">#</a> 2. 配置数据库及云服务器端口放开</h4>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>mysql -u -root -p</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">>></span><span class="token operator">>></span></pre></td></tr><tr><td data-num="3"></td><td><pre>use mysql<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>create database chevereto<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>CREATE <span class="token environment constant">USER</span> <span class="token string">'usernmae'</span>@<span class="token string">'%'</span> IDENTIFIED BY <span class="token string">'password'</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>GRANT ALL ON chevereto.* TO <span class="token string">'chevereto'</span>@<span class="token string">'%'</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>新建了一个数据库 chevereto，用于后续配置。</p>
+<p>其中 % 为通配符，表示任意来源都可以登录该帐号。</p>
+<p>同时在云服务器防火墙策略放开 3306 端口</p>
+<h4 id="3-启动镜像"><a class="markdownIt-Anchor" href="#3-启动镜像">#</a> 3. 启动镜像</h4>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>docker pull linuxserver/chevereto</pre></td></tr></table></figure><p>启动命令：服务器将对应端口放开</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>docker run -d <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  --name<span class="token operator">=</span>chevereto <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  -e <span class="token assign-left variable">PUID</span><span class="token operator">=</span><span class="token number">1000</span> <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  -e <span class="token assign-left variable">PGID</span><span class="token operator">=</span><span class="token number">1000</span> <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  -e <span class="token assign-left variable">TZ</span><span class="token operator">=</span>Asia/Shanghai <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  -p <span class="token number">80</span>:80 <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  -p <span class="token number">443</span>:443 <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  -v /data/chevereto/config:/config <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="9"></td><td><pre>  -v /data/chevereto/data:/data <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="10"></td><td><pre>  -m 150m<span class="token punctuation">\</span></pre></td></tr><tr><td data-num="11"></td><td><pre>  --restart unless-stopped <span class="token punctuation">\</span></pre></td></tr><tr><td data-num="12"></td><td><pre>  linuxserver/chevereto</pre></td></tr></table></figure><p>-p 表示 宿主机：docker 端口 自行调整映射端口</p>
+<p>-v 为挂载地址 需提前新建</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">cd</span> /data/</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">mkdir</span> cheverto</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token function">mkdir</span> cheverto/config</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token function">mkdir</span> cheverto/data</pre></td></tr></table></figure><h4 id="4-页面配置"><a class="markdownIt-Anchor" href="#4-页面配置">#</a> 4. 页面配置</h4>
+<p>正常情况下，打开之前映射的网址，能看到数据库配置页面，将之前设置好的数据库和密码输入，同时下一步配置管理员信息</p>
+<p>在 dashboard 可开启私人模式</p>
+<h4 id="5-api配置"><a class="markdownIt-Anchor" href="#5-api配置">#</a> 5. API 配置</h4>
+<p>进入 dashboard-&gt;settings-&gt;API 页面进行设置</p>
+<p><img data-src="http://110.40.154.106:8888/images/a02ef3b0bc19.png" alt="Clipboard - 2021-12-15 00.27.20"></p>
+<p>​	<strong>采用 post 方法将图片进行上传</strong></p>
+<h5 id="数据格式"><a class="markdownIt-Anchor" href="#数据格式">#</a> 数据格式:</h5>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>data <span class="token operator">=</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token string">"key"</span><span class="token punctuation">:</span><span class="token string">"Your API KEY"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token string">"source"</span><span class="token punctuation">:</span> imagesource<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token string">"action"</span><span class="token punctuation">:</span><span class="token string">"upload"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token string">"format"</span><span class="token punctuation">:</span><span class="token string">"json"</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><h5 id="url拆解"><a class="markdownIt-Anchor" href="#url拆解">#</a> url 拆解：</h5>
+<p>分为四个部分</p>
+<ol>
+<li>
+<p>ip 地址部分 <code>http://mysite.com/api/1/upload/?</code></p>
+</li>
+<li>
+<p>api 部分 <code>key=12345</code></p>
+</li>
+<li>
+<p>图片位置 <code>source=http://somewebsite/someimage.jpg</code>  可以使用网络位置</p>
+<p>本地文件需要 base64 编码</p>
+</li>
+<li>
+<p>json 格式 <code>format=json</code>  不可少</p>
+</li>
+</ol>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>url <span class="token operator">=</span> <span class="token string">"http://mysite.com/api/1/upload/?key=12345source=http://somewebsite/someimage.jpg&amp;format=json"</span></pre></td></tr></table></figure><h5 id="python-urllib-post"><a class="markdownIt-Anchor" href="#python-urllib-post">#</a> python urllib post：</h5>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">upLoadImage</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    filename <span class="token operator">=</span> tobase64<span class="token punctuation">(</span>filename<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    data<span class="token punctuation">[</span><span class="token string">"source"</span><span class="token punctuation">]</span> <span class="token operator">=</span> filename</pre></td></tr><tr><td data-num="4"></td><td><pre>    test <span class="token operator">=</span> parse<span class="token punctuation">.</span>urlencode<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    req <span class="token operator">=</span> request<span class="token punctuation">.</span>Request<span class="token punctuation">(</span>url<span class="token punctuation">,</span>data <span class="token operator">=</span> test<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    page <span class="token operator">=</span> request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>req<span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    page <span class="token operator">=</span> page<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    response_json <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>page<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>response_json<span class="token punctuation">[</span><span class="token string">"image"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"url"</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h4 id="6-typora配置"><a class="markdownIt-Anchor" href="#6-typora配置">#</a> 6. typora 配置</h4>
+<p>偏好设置 -&gt; 图像 -&gt; 上传服务设定：选择 custom command</p>
+<p>输入：</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>python3 post.py</pre></td></tr></table></figure><p>点击验证图片上传选项</p>
+<p><img data-src="http://110.40.154.106:8888/images/786abd3945aa.png" alt="Clipboard - 2021-12-15 00.38.20"></p>
+<p>显示上传成功，同时将插入图片时的规则中：对本地应用和对网络位置应用勾上。这样每次加入图片时，typora 都会将图片上传并且替换成图床上的地址。</p>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2021-12-15 00:57:50" itemprop="dateModified" datetime="2021-12-15T00:57:50+08:00">2021-12-15</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="PLUMEFOX WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="PLUMEFOX Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="PLUMEFOX PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>PLUMEFOX <i class="ic i-at"><em>@</em></i>Category
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://plumefox.github.io/[object%20Object]/typora+chevereto%E5%9B%BE%E5%BA%8A/" title="关于自建图床那些事──typora+cheverto图床">https://plumefox.github.io/[object Object]/typora+chevereto图床/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/%5Bobject%20Object%5D/win10/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicitzannuj20zk0m8b29.jpg" title="虚拟机win10优化">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>虚拟机win10优化</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E8%87%AA%E5%BB%BA%E5%9B%BE%E5%BA%8A%E9%82%A3%E4%BA%9B%E4%BA%8Btyporacheverto%E5%9B%BE%E5%BA%8A"><span class="toc-number">1.</span> <span class="toc-text"> 关于自建图床那些事──typora+cheverto 图床</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%8F%82%E8%80%83%E4%BF%A1%E6%81%AF"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 一些参考信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B"><span class="toc-number">1.0.2.</span> <span class="toc-text"> 配置流程：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85docker"><span class="toc-number">1.0.2.1.</span> <span class="toc-text"> 1. 服务器安装 docker</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8A%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%8F%A3%E6%94%BE%E5%BC%80"><span class="toc-number">1.0.2.2.</span> <span class="toc-text"> 2. 配置数据库及云服务器端口放开</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8%E9%95%9C%E5%83%8F"><span class="toc-number">1.0.2.3.</span> <span class="toc-text"> 3. 启动镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE"><span class="toc-number">1.0.2.4.</span> <span class="toc-text"> 4. 页面配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-api%E9%85%8D%E7%BD%AE"><span class="toc-number">1.0.2.5.</span> <span class="toc-text"> 5. API 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.0.2.5.1.</span> <span class="toc-text"> 数据格式:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#url%E6%8B%86%E8%A7%A3"><span class="toc-number">1.0.2.5.2.</span> <span class="toc-text"> url 拆解：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#python-urllib-post"><span class="toc-number">1.0.2.5.3.</span> <span class="toc-text"> python urllib post：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-typora%E9%85%8D%E7%BD%AE"><span class="toc-number">1.0.2.6.</span> <span class="toc-text"> 6. typora 配置</span></a></li></ol></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="PLUMEFOX"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">PLUMEFOX</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">8</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3BsdW1lZm94" title="https:&#x2F;&#x2F;github.com&#x2F;plumefox"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9wbHVtZWZveDE=" title="https:&#x2F;&#x2F;twitter.com&#x2F;plumefox1"><i class="ic i-twitter"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOkx1Y3lzVGltZUBvdXRsb29rLmNvbQ==" title="mailto:LucysTime@outlook.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/git/" title="git基本操作">git基本操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/miral%E9%AA%B0%E5%A8%98%E9%85%8D%E7%BD%AE/" title="miral骰娘配置">miral骰娘配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/pwntools_Usage/" title="pwntools用法">pwntools用法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/mac-hdmi/" title="mac外接2k显示器开启hdpi">mac外接2k显示器开启hdpi</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/install-dvta/" title="dvta环境搭建">dvta环境搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/typora+chevereto%E5%9B%BE%E5%BA%8A/" title="关于自建图床那些事──typora+cheverto图床">关于自建图床那些事──typora+cheverto图床</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%5Bobject%20Object%5D/win10/" title="虚拟机win10优化">虚拟机win10优化</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">PLUMEFOX @ PLUMEFOX</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '[object Object]/typora+chevereto图床/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
